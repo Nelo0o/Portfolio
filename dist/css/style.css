@@ -377,14 +377,15 @@ p {
 
 .contact {
   width: 173px;
-  height: 55px;
-  color: hsl(0, 0%, 100%);
-  border: solid 2px hsl(46, 65%, 52%);
-  font-size: 1.25rem;
+  color: white;
+  font-size: 1rem;
   display: inline-block;
-  line-height: 47px;
+  padding: 15px 25px;
+  line-height: normal;
+  border: solid 2px hsl(46, 65%, 52%);
+  background: transparent;
   text-align: center;
-  transition: background 0.3s ease;
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .contact:is:visited {
   color: white;
@@ -416,6 +417,7 @@ p {
 }
 .header .container-logo .logo {
   width: 50px;
+  height: auto;
 }
 .header .container-nav {
   position: absolute;

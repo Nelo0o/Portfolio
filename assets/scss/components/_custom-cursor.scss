@@ -1,0 +1,32 @@
+.custom-cursor {
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #e3e3e3c1;
+  position: fixed;
+  z-index: 100;
+  pointer-events: none;
+
+  &::after {
+
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #111;
+    background: #f4f4f4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
+  @media screen and (max-width: map-get($breakpoints, "md")) {
+
+    display: none;
+
+  }
+}

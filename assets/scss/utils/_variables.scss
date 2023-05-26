@@ -1,0 +1,29 @@
+// Colors
+$primary: hsla(240, 95%, 8%, 100%);
+$secondary: hsla(46, 65%, 52%, 100%);
+$white: hsl(0, 0%, 100%);
+
+// Typography
+$font: "Space Grotesk", sans-serif;
+
+$font-weight: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+);
+
+// Spacing
+$wrapper: 20px;
+
+// Grid params
+$container: 1280px;
+$grid-columns: 12;
+$grid-gap: 20px;
+
+// Breakpoints
+$breakpoints: (
+  md: 768px,
+  lg: 1280px,
+);

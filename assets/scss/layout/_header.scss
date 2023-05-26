@@ -1,0 +1,124 @@
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+
+  .container-logo {
+    display: flex;
+
+    .logo {
+      width: 50px;
+    }
+  }
+
+  .container-nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5000;
+
+    nav {
+      ul {
+        display: flex;
+        gap: 40px;
+
+        li {
+          a {
+            font-size: pxToRem(20);
+            letter-spacing: 0.2px;
+            color: $white;
+
+            &::after {
+              content: "";
+              display: block;
+              margin-top: 6px;
+              width: 10px;
+              height: 3px;
+              background: $secondary;
+              transition: width ease 0.3s;
+            }
+
+            &:hover {
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .socials {
+    grid-column: 11 / span 2;
+    justify-self: end;
+    align-self: center;
+    display: flex;
+    gap: 20px;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+
+      &:hover {
+        padding: 5px;
+        background-color: $secondary;
+      }
+    }
+  }
+
+  @media screen and (max-width: map-get($breakpoints, "md")) {
+    .container-logo {
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      transform: translate(-50%);
+      visibility: hidden;
+    }
+
+    .container-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+
+      nav {
+        ul {
+          flex-direction: column;
+          text-align: center;
+
+          li {
+            a {
+              display: inline-block;
+
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .socials {
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translate(-50%);
+      visibility: hidden;
+    }
+  }
+}
+
+.sticky {
+  position: fixed;
+  background: hsla(240, 95%, 8%, 100%);
+  transition: all 0.3s ease;
+}

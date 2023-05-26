@@ -1,0 +1,112 @@
+.hero {
+  height: 100vh;
+  color: $white;
+  background-color: $primary;
+  position: relative;
+
+  .about {
+    grid-column: 1 / span 6;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    h2 {
+      width: calc(100% - 190px);
+    }
+
+    p {
+      width: calc(100% - 50px);
+    }
+  }
+
+  &__push-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid $white;
+    background: transparent;
+    position: absolute;
+    bottom: clamp(30px, 7.5vw, 75px);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+    z-index: 500;
+
+    svg {
+      width: 50%;
+      pointer-events: none;
+    }
+
+    &:hover {
+      scale: 1.05;
+      border-color: $secondary;
+    }
+  }
+
+  .container-mascotte-md {
+    width: 525px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+
+  }
+
+  .container-mascotte-lg {
+    width: 852px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+
+  }
+
+  @media screen and (max-width: map-get($breakpoints, "md")) {
+    .about {
+      position: relative;
+      text-align: center;
+      z-index: 50;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      justify-content: space-around;
+
+      h2 {
+        width: 100%;
+      }
+
+      p {
+        width: 100%;
+      }
+
+      a {
+        align-self: center;
+        scale: 0.8;
+      }
+    }
+
+    &__push-link {
+      display: flex;
+    }
+
+    .container-mascotte-md {
+      bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1800px) {
+    .about {
+      scale: 1.3;
+      transform-origin: left;
+    }
+  }
+}
+
+.skills {
+  height: 1500px;
+}

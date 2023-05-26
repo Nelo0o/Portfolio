@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+// html {
+//   cursor: none;
+// }
+
+// a,
+// button,
+// input,
+// label,
+// textarea,
+// img {
+//   cursor: none;
+// }
+
+.wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.no-scroll,
+.no-scroll body {
+  overflow: hidden;
+}
+
+body {
+  font-family: $font;
+  height: auto;
+  position: relative;
+}

@@ -1,0 +1,62 @@
+h1 {
+  margin: 0;
+  font-size: pxToRem(40);
+  letter-spacing: 0.2px;
+  font-weight: map-get($font-weight, "regular");
+
+  .hello {
+    font-weight: map-get($font-weight, "bold");
+  }
+
+  .name {
+    display: inline-block;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 5px;
+      margin-top: 5px;
+      background-color: $secondary;
+    }
+  }
+}
+
+h2 {
+  font-weight: map-get($font-weight, "light");
+  font-size: pxToRem(24);
+  line-height: 150%;
+  letter-spacing: 0.2px;
+
+  span {
+    color: $secondary;
+  }
+}
+
+p {
+  font-weight: map-get($font-weight, "light");
+  font-size: pxToRem(16);
+  line-height: 150%;
+  letter-spacing: 0.2px;
+}
+
+.contact {
+  width: 173px;
+  height: 55px;
+  color: $white;
+  border: solid 2px $secondary;
+  font-size: pxToRem(20);
+  display: inline-block;
+  line-height: 47px;
+  text-align: center;
+  transition: background 0.3s ease;
+
+  &:is:visited {
+    color: white;
+  }
+
+  &:hover {
+    background-color: $secondary;
+    color: $primary;
+  }
+}

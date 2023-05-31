@@ -3,6 +3,7 @@
   color: $white;
   background-color: $primary;
   position: relative;
+  display: flex;
 
   .about {
     grid-column: 1 / span 6;
@@ -68,13 +69,9 @@
 
   @media screen and (max-width: map-get($breakpoints, "md")) {
     .about {
-      position: relative;
+      justify-content: center;
       text-align: center;
       z-index: 50;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      justify-content: space-around;
 
       h2 {
         width: 100%;
@@ -86,12 +83,14 @@
 
       a {
         align-self: center;
-        scale: 0.8;
+        scale: 0.9;
       }
     }
 
     &__push-link {
-      display: flex;
+      position: initial;
+      transform: initial;
+      margin: 0;
     }
 
     .container-mascotte-md {
@@ -110,11 +109,21 @@
 .skills {
   background: $primary;
   color: $white;
-  padding: 120px;
+  padding-top: 120px;
   height: 1500px;
 
   h3 {
-    max-width: 240px;
+    max-width: fit-content;
+    height: fit-content;
     grid-column: 1 / span 4;
+  }
+
+  @media screen and (max-width: map-get($breakpoints, "md")) {
+    display: flex;
+    justify-content: center;
+
+    h3 {
+      width: 100%;
+    }
   }
 }

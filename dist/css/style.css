@@ -371,8 +371,8 @@ h2 span {
 h3 {
   font-weight: 700;
   font-size: 2.25rem;
-  line-height: 150%;
   letter-spacing: 0.2px;
+  display: inline-block;
 }
 h3::after {
   content: "";
@@ -391,7 +391,7 @@ p {
 }
 
 .contact {
-  width: 173px;
+  width: 190px;
   color: white;
   font-size: 1rem;
   display: inline-block;
@@ -527,6 +527,7 @@ p {
   color: hsl(0, 0%, 100%);
   background-color: hsl(240, 95%, 8%);
   position: relative;
+  display: flex;
 }
 .hero .about {
   grid-column: 1/span 6;
@@ -582,13 +583,9 @@ p {
 }
 @media screen and (max-width: 768px) {
   .hero .about {
-    position: relative;
+    justify-content: center;
     text-align: center;
     z-index: 50;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    justify-content: space-around;
   }
   .hero .about h2 {
     width: 100%;
@@ -598,10 +595,12 @@ p {
   }
   .hero .about a {
     align-self: center;
-    scale: 0.8;
+    scale: 0.9;
   }
   .hero__push-link {
-    display: flex;
+    position: initial;
+    transform: initial;
+    margin: 0;
   }
   .hero .container-mascotte-md {
     bottom: 0;
@@ -617,12 +616,22 @@ p {
 .skills {
   background: hsl(240, 95%, 8%);
   color: hsl(0, 0%, 100%);
-  padding: 120px;
+  padding-top: 120px;
   height: 1500px;
 }
 .skills h3 {
-  max-width: 240px;
+  max-width: fit-content;
+  height: fit-content;
   grid-column: 1/span 4;
+}
+@media screen and (max-width: 768px) {
+  .skills {
+    display: flex;
+    justify-content: center;
+  }
+  .skills h3 {
+    width: 100%;
+  }
 }
 
 .custom-cursor {
@@ -655,8 +664,8 @@ p {
 
 .hamburger {
   position: fixed;
-  top: 5vw;
-  right: 10vw;
+  top: 25px;
+  right: 30px;
   width: 48px;
   height: 48px;
   z-index: 100;

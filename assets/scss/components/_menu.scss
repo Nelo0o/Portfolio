@@ -1,6 +1,6 @@
 .hamburger {
 
-  position: absolute;
+  position: fixed;
   top: 5vw;
   right: 10vw;
   width: 48px;
@@ -68,10 +68,9 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 100%;
+  left: 0;
   right: 0;
   animation: displayMenu 0.2s linear forwards;
-  transition: all 0.3s ease;
 
 }
 
@@ -79,13 +78,13 @@
 
   0% {
 
-    left: 100%;
+    bottom: 100%;
 
   }
 
   100% {
 
-    left: 0;
+    bottom: 0;
 
   }
 }

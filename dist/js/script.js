@@ -4,15 +4,16 @@ import {
     slideDown,
     handleScroll,
     toggleMenu,
-    setupMascotteContainers
+    setupMascotteContainers, addSlideDownListener
 } from "./functions.js";
 
 // Custom cursor
 window.addEventListener("mousemove", handleCustomCursor);
 
 // Smooth slide sur la section suivante.
-const heroPushLink = document.querySelector(".hero__push-link");
-heroPushLink.addEventListener("click", slideDown);
+addSlideDownListener(".hero__push-link");
+addSlideDownListener(".about");
+addSlideDownListener(".discover");
 
 // Rend sticky le header au scroll à partir de la seconde section.
 window.addEventListener("scroll", handleScroll);

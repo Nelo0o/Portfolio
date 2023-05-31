@@ -14,17 +14,35 @@ export function slideDown(e) {
     });
 }
 
+export function addSlideDownListener(selector) {
+    const element = document.querySelector(selector);
+    element.addEventListener("click", slideDown);
+}
+
+// let prevScrollPos = window.scrollY;
+
 export function handleScroll() {
     const header = document.querySelector(".header");
     const heroSection = document.querySelector(".skills");
     const heroSectionOffsetTop = heroSection.offsetTop;
 
-    if (window.scrollY > heroSectionOffsetTop) {
+    const currentScrollPos = window.scrollY;
+
+    if (currentScrollPos > heroSectionOffsetTop) {
         header.classList.add("sticky");
     } else {
         header.classList.remove("sticky");
     }
+
+    // if (currentScrollPos > prevScrollPos) {
+    //     header.style.visibility = "hidden";
+    // } else {
+    //     header.style.visibility = "visible";
+    // }
+    //
+    // prevScrollPos = currentScrollPos;
 }
+
 
 export function toggleToVisible() {
 

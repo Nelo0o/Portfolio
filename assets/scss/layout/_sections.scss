@@ -108,5 +108,13 @@
 }
 
 .skills {
+  background: $primary;
+  color: $white;
+  padding: 120px;
   height: 1500px;
+
+  h3 {
+    max-width: 240px;
+    grid-column: 1 / span 4;
+  }
 }

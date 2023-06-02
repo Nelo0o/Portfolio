@@ -3,7 +3,6 @@
   color: $white;
   background-color: $primary;
   position: relative;
-  display: flex;
 
   .about {
     grid-column: 1 / span 6;
@@ -68,6 +67,8 @@
   }
 
   @media screen and (max-width: map-get($breakpoints, "md")) {
+    display: flex;
+
     .about {
       justify-content: center;
       text-align: center;
@@ -97,20 +98,13 @@
       bottom: 0;
     }
   }
-
-  @media screen and (min-width: 1800px) {
-    .about {
-      scale: 1.3;
-      transform-origin: left;
-    }
-  }
 }
 
 .skills {
-  background: $primary;
-  color: $white;
+  background: $white;
+  color: $primary;
   padding-top: 120px;
-  height: 1500px;
+  height: fit-content;
 
   h3 {
     max-width: fit-content;
@@ -121,9 +115,21 @@
   @media screen and (max-width: map-get($breakpoints, "md")) {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 
     h3 {
       width: 100%;
     }
+  }
+}
+
+.projects {
+  height: 1500px;
+  padding-top: 120px;
+
+  h3 {
+    max-width: fit-content;
+    height: fit-content;
+    grid-column: 1 / span 4;
   }
 }

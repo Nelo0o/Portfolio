@@ -49,6 +49,13 @@ h3 {
   }
 }
 
+h4 {
+  font-weight: map-get($font-weight, "bold");
+  font-size: pxToRem(20);
+  line-height: 150%;
+  letter-spacing: 0.2px;
+}
+
 p {
   font-weight: map-get($font-weight, "light");
   font-size: pxToRem(16);

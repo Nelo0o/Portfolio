@@ -1,0 +1,47 @@
+.container-skills {
+  grid-column: 1 / span 12;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 60px;
+
+  .skills-card {
+    max-width: 413px;
+    width: 100%;
+    height: 245px;
+    border: solid 3px $secondary;
+    border-radius: 25px;
+    background: $primary;
+    color: $white;
+    position: relative;
+    overflow: hidden;
+
+    &__infos {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+
+      span {
+        opacity: 50%;
+      }
+    }
+
+    .bg-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

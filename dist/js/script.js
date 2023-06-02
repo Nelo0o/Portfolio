@@ -1,10 +1,9 @@
 // Import.
 import {
     handleCustomCursor,
-    slideDown,
     handleScroll,
     toggleMenu,
-    setupMascotteContainers, addSlideDownListener
+    setupMascotteContainers, addSlideDownListener, createSkills
 } from "./functions.js";
 
 // Custom cursor
@@ -14,6 +13,7 @@ window.addEventListener("mousemove", handleCustomCursor);
 addSlideDownListener(".hero__push-link");
 addSlideDownListener(".about");
 addSlideDownListener(".discover");
+addSlideDownListener(".projects");
 
 // Rend sticky le header au scroll à partir de la seconde section.
 window.addEventListener("scroll", handleScroll);
@@ -24,3 +24,5 @@ hamburgerMenu.addEventListener("click", toggleMenu);
 
 // Permet de switch de taille de mascotte pour le responsive
 setupMascotteContainers();
+
+createSkills();

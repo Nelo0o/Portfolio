@@ -383,6 +383,13 @@ h3::after {
   background-color: hsl(46, 65%, 52%);
 }
 
+h4 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 150%;
+  letter-spacing: 0.2px;
+}
+
 p {
   font-weight: 300;
   font-size: 1rem;
@@ -527,7 +534,6 @@ p {
   color: hsl(0, 0%, 100%);
   background-color: hsl(240, 95%, 8%);
   position: relative;
-  display: flex;
 }
 .hero .about {
   grid-column: 1/span 6;
@@ -582,6 +588,9 @@ p {
   overflow: hidden;
 }
 @media screen and (max-width: 768px) {
+  .hero {
+    display: flex;
+  }
   .hero .about {
     justify-content: center;
     text-align: center;
@@ -606,18 +615,12 @@ p {
     bottom: 0;
   }
 }
-@media screen and (min-width: 1800px) {
-  .hero .about {
-    scale: 1.3;
-    transform-origin: left;
-  }
-}
 
 .skills {
-  background: hsl(240, 95%, 8%);
-  color: hsl(0, 0%, 100%);
+  background: hsl(0, 0%, 100%);
+  color: hsl(240, 95%, 8%);
   padding-top: 120px;
-  height: 1500px;
+  height: fit-content;
 }
 .skills h3 {
   max-width: fit-content;
@@ -628,10 +631,21 @@ p {
   .skills {
     display: flex;
     justify-content: center;
+    flex-direction: column;
   }
   .skills h3 {
     width: 100%;
   }
+}
+
+.projects {
+  height: 1500px;
+  padding-top: 120px;
+}
+.projects h3 {
+  max-width: fit-content;
+  height: fit-content;
+  grid-column: 1/span 4;
 }
 
 .custom-cursor {
@@ -725,6 +739,48 @@ p {
   100% {
     bottom: 0;
   }
+}
+.container-skills {
+  grid-column: 1/span 12;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 60px;
+}
+.container-skills .skills-card {
+  max-width: 413px;
+  width: 100%;
+  height: 245px;
+  border: solid 3px hsl(46, 65%, 52%);
+  border-radius: 25px;
+  background: hsl(240, 95%, 8%);
+  color: hsl(0, 0%, 100%);
+  position: relative;
+  overflow: hidden;
+}
+.container-skills .skills-card__infos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.container-skills .skills-card__infos img {
+  width: 60px;
+  height: 60px;
+}
+.container-skills .skills-card__infos span {
+  opacity: 50%;
+}
+.container-skills .skills-card .bg-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=style.css.map */

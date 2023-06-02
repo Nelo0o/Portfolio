@@ -95,3 +95,56 @@ export function setupMascotteContainers() {
 
     window.addEventListener("resize", toggleMascotteContainer);
 }
+
+export function createSkills() {
+    const svg = [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "PHP",
+        "Vue.js",
+        "Node.js",
+        "Bootstrap",
+        "MySQL",
+        "Figma",
+    ]
+
+    const bgSvg = [
+        "bg-html",
+        "bg-css",
+        "bg-javascript",
+        "bg-php",
+        "bg-vue",
+        "bg-node",
+        "bg-bootstrap",
+        "bg-mysql",
+        "bg-figma",
+    ]
+    const container = document.querySelector(".container-skills");
+
+    svg.forEach((element, index) => {
+        const newCard = document.createElement("article");
+        const newContainerInfos = document.createElement("div");
+        const newImg = document.createElement("img");
+        const newH4 = document.createElement("h4");
+        const newSpan = document.createElement("span");
+
+        newCard.className = "skills-card";
+        newContainerInfos.className = "skills-card__infos";
+        newImg.src = `./assets/svg/skills-svg/${element}.svg`;
+        newH4.innerText = element;
+        newSpan.innerText = "1 an";
+
+        const newBg = document.createElement("img");
+        newBg.className = "bg-img";
+        newBg.src = `./assets/svg/skills-svg/${bgSvg[index]}.svg`;
+        newCard.appendChild(newBg);
+
+        newContainerInfos.appendChild(newImg);
+        newContainerInfos.appendChild(newH4);
+        newContainerInfos.appendChild(newSpan);
+
+        newCard.appendChild(newContainerInfos);
+        container.appendChild(newCard);
+    });
+}

@@ -1,5 +1,35 @@
 import {mascotteLG, mascotteMD} from "./svg.js";
 
+const SELECTOR_CONTAINER_SKILLS = ".container-skills";
+const SELECTOR_HEADER = ".header";
+const SELECTOR_HAMBURGER_MENU = ".header__nav-toggle";
+
+const IMAGE_PATH = "./assets/svg/skills-svg/";
+
+const SVG = [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "PHP",
+    "Vue.js",
+    "Node.js",
+    "Bootstrap",
+    "MySQL",
+    "Figma",
+];
+
+const BG_SVG = [
+    "bg-html",
+    "bg-css",
+    "bg-javascript",
+    "bg-php",
+    "bg-vue",
+    "bg-node",
+    "bg-bootstrap",
+    "bg-mysql",
+    "bg-figma",
+];
+
 export function handleCustomCursor(e) {
     const customCursor = document.querySelector(".custom-cursor");
     customCursor.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
@@ -9,7 +39,7 @@ export function slideDown(e) {
     e.preventDefault();
 
     window.scrollTo({
-        top: document.querySelector(`${e.target.getAttribute("href")}`).offsetTop,
+        top: document.querySelector(e.target.getAttribute("href")).offsetTop,
         behavior: "smooth",
     });
 }
@@ -19,46 +49,35 @@ export function addSlideDownListener(selector) {
     element.addEventListener("click", slideDown);
 }
 
-// let prevScrollPos = window.scrollY;
-
 export function handleScroll() {
-    const header = document.querySelector(".header");
+    const header = document.querySelector(SELECTOR_HEADER);
     const heroSection = document.querySelector(".skills");
     const heroSectionOffsetTop = heroSection.offsetTop;
 
-    const currentScrollPos = window.scrollY;
+    const currentScrollPos = window.scrollY + 1;
 
     if (currentScrollPos > heroSectionOffsetTop) {
         header.classList.add("sticky");
     } else {
         header.classList.remove("sticky");
     }
-
-    // if (currentScrollPos > prevScrollPos) {
-    //     header.style.visibility = "hidden";
-    // } else {
-    //     header.style.visibility = "visible";
-    // }
-    //
-    // prevScrollPos = currentScrollPos;
 }
 
 function toggleToVisible() {
-
     const elements = [
         document.querySelector(".container-logo"),
         document.querySelector(".container-nav"),
         document.querySelector(".socials"),
-    ]
+    ];
 
     elements.forEach((element) => {
         element.style.visibility = element.style.visibility === "visible" ? "hidden" : "visible";
     });
 }
 
-function toggleMenuClick() {
-    const header = document.querySelector(".header");
-    const hamburgerMenu = document.querySelector(".header__nav-toggle");
+export function toggleMenuClick() {
+    const header = document.querySelector(SELECTOR_HEADER);
+    const hamburgerMenu = document.querySelector(SELECTOR_HAMBURGER_MENU);
     const page = document.documentElement;
 
     hamburgerMenu.classList.toggle("menu--open");
@@ -68,8 +87,8 @@ function toggleMenuClick() {
 }
 
 export function toggleMenu() {
-    const header = document.querySelector(".header");
-    const hamburgerMenu = document.querySelector(".header__nav-toggle");
+    const header = document.querySelector(SELECTOR_HEADER);
+    const hamburgerMenu = document.querySelector(SELECTOR_HAMBURGER_MENU);
     const page = document.documentElement;
 
     hamburgerMenu.classList.toggle("menu--open");
@@ -79,14 +98,8 @@ export function toggleMenu() {
 
     const menuLinks = document.querySelectorAll(".container-nav nav ul li a");
 
-    const linksArray = Array.from(menuLinks);
-
-    // Supprimer les écouteurs d'événements existants
-    linksArray.forEach((link) => {
+    menuLinks.forEach((link) => {
         link.removeEventListener("click", toggleMenuClick);
-    });
-
-    linksArray.forEach((link) => {
         link.addEventListener("click", toggleMenuClick);
     });
 }
@@ -120,32 +133,9 @@ export function setupMascotteContainers() {
 }
 
 export function createSkills() {
-    const svg = [
-        "HTML5",
-        "CSS3",
-        "JavaScript",
-        "PHP",
-        "Vue.js",
-        "Node.js",
-        "Bootstrap",
-        "MySQL",
-        "Figma",
-    ]
+    const container = document.querySelector(SELECTOR_CONTAINER_SKILLS);
 
-    const bgSvg = [
-        "bg-html",
-        "bg-css",
-        "bg-javascript",
-        "bg-php",
-        "bg-vue",
-        "bg-node",
-        "bg-bootstrap",
-        "bg-mysql",
-        "bg-figma",
-    ]
-    const container = document.querySelector(".container-skills");
-
-    svg.forEach((element, index) => {
+    SVG.forEach((element, index) => {
         const newCard = document.createElement("article");
         const newContainerInfos = document.createElement("div");
         const newImg = document.createElement("img");
@@ -154,19 +144,16 @@ export function createSkills() {
 
         newCard.className = "skills-card";
         newContainerInfos.className = "skills-card__infos";
-        newImg.src = `./assets/svg/skills-svg/${element}.svg`;
+        newImg.src = `${IMAGE_PATH}${element}.svg`;
         newH4.innerText = element;
         newSpan.innerText = "1 an";
 
         const newBg = document.createElement("img");
         newBg.className = "bg-img";
-        newBg.src = `./assets/svg/skills-svg/${bgSvg[index]}.svg`;
-        newCard.appendChild(newBg);
+        newBg.src = `${IMAGE_PATH}${BG_SVG[index]}.svg`;
+        newCard.append(newBg);
 
-        newContainerInfos.appendChild(newImg);
-        newContainerInfos.appendChild(newH4);
-        newContainerInfos.appendChild(newSpan);
-
+        newContainerInfos.append(newImg, newH4, newSpan);
         newCard.appendChild(newContainerInfos);
         container.appendChild(newCard);
     });

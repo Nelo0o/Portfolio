@@ -43,8 +43,7 @@ export function handleScroll() {
     // prevScrollPos = currentScrollPos;
 }
 
-
-export function toggleToVisible() {
+function toggleToVisible() {
 
     const elements = [
         document.querySelector(".container-logo"),
@@ -57,6 +56,17 @@ export function toggleToVisible() {
     });
 }
 
+function toggleMenuClick() {
+    const header = document.querySelector(".header");
+    const hamburgerMenu = document.querySelector(".header__nav-toggle");
+    const page = document.documentElement;
+
+    hamburgerMenu.classList.toggle("menu--open");
+    header.classList.toggle("display-menu");
+    page.classList.toggle("no-scroll");
+    toggleToVisible();
+}
+
 export function toggleMenu() {
     const header = document.querySelector(".header");
     const hamburgerMenu = document.querySelector(".header__nav-toggle");
@@ -66,6 +76,19 @@ export function toggleMenu() {
     header.classList.toggle("display-menu");
     page.classList.toggle("no-scroll");
     toggleToVisible();
+
+    const menuLinks = document.querySelectorAll(".container-nav nav ul li a");
+
+    const linksArray = Array.from(menuLinks);
+
+    // Supprimer les écouteurs d'événements existants
+    linksArray.forEach((link) => {
+        link.removeEventListener("click", toggleMenuClick);
+    });
+
+    linksArray.forEach((link) => {
+        link.addEventListener("click", toggleMenuClick);
+    });
 }
 
 export function setupMascotteContainers() {

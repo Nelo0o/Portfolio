@@ -106,30 +106,21 @@
   padding-top: 120px;
   height: fit-content;
 
-  h3 {
-    max-width: fit-content;
-    height: fit-content;
-    grid-column: 1 / span 4;
+  @media screen and (max-width: map-get($breakpoints, "md")) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
+}
+
+.projects {
+  height: auto;
+  padding-top: 120px;
+  padding-bottom: 120px;
 
   @media screen and (max-width: map-get($breakpoints, "md")) {
     display: flex;
     justify-content: center;
     flex-direction: column;
-
-    h3 {
-      width: 100%;
-    }
-  }
-}
-
-.projects {
-  height: 1500px;
-  padding-top: 120px;
-
-  h3 {
-    max-width: fit-content;
-    height: fit-content;
-    grid-column: 1 / span 4;
   }
 }

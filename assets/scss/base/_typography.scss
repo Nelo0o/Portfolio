@@ -34,6 +34,7 @@ h2 {
 }
 
 h3 {
+  width: fit-content;
   font-weight: map-get($font-weight, "bold");
   font-size: pxToRem(36);
   letter-spacing: 0.2px;
@@ -46,6 +47,12 @@ h3 {
     height: 5px;
     margin-top: 5px;
     background-color: $secondary;
+  }
+
+  @media screen and (max-width: map-get($breakpoints, "md")) {
+    width: fit-content;
+    text-align: center;
+    align-self: center;
   }
 }
 

@@ -369,6 +369,7 @@ h2 span {
 }
 
 h3 {
+  width: fit-content;
   font-weight: 700;
   font-size: 2.25rem;
   letter-spacing: 0.2px;
@@ -381,6 +382,13 @@ h3::after {
   height: 5px;
   margin-top: 5px;
   background-color: hsl(46, 65%, 52%);
+}
+@media screen and (max-width: 768px) {
+  h3 {
+    width: fit-content;
+    text-align: center;
+    align-self: center;
+  }
 }
 
 h4 {
@@ -622,30 +630,25 @@ p {
   padding-top: 120px;
   height: fit-content;
 }
-.skills h3 {
-  max-width: fit-content;
-  height: fit-content;
-  grid-column: 1/span 4;
-}
 @media screen and (max-width: 768px) {
   .skills {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
-  .skills h3 {
-    width: 100%;
-  }
 }
 
 .projects {
-  height: 1500px;
+  height: auto;
   padding-top: 120px;
+  padding-bottom: 120px;
 }
-.projects h3 {
-  max-width: fit-content;
-  height: fit-content;
-  grid-column: 1/span 4;
+@media screen and (max-width: 768px) {
+  .projects {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 .custom-cursor {

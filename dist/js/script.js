@@ -13,7 +13,7 @@ window.addEventListener("mousemove", handleCustomCursor);
 addSlideDownListener(".hero__push-link");
 addSlideDownListener(".about");
 addSlideDownListener(".discover");
-addSlideDownListener(".projects");
+addSlideDownListener(".more");
 
 // Rend sticky le header au scroll à partir de la seconde section.
 window.addEventListener("scroll", handleScroll);

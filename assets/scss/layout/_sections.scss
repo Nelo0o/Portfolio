@@ -131,11 +131,12 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+  }
 
+  @media screen and (max-width: map-get($breakpoints, "sm")) {
     .container-projects {
       flex-direction: column;
       align-items: center;
-      gap: 50px;
     }
   }
 }

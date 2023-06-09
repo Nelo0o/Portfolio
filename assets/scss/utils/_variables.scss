@@ -7,11 +7,11 @@ $white: hsl(0, 0%, 100%);
 $font: "Space Grotesk", sans-serif;
 
 $font-weight: (
-  light: 300,
-  regular: 400,
-  medium: 500,
-  semibold: 600,
-  bold: 700,
+        light: 300,
+        regular: 400,
+        medium: 500,
+        semibold: 600,
+        bold: 700,
 );
 
 // Spacing
@@ -24,6 +24,7 @@ $grid-gap: 20px;
 
 // Breakpoints
 $breakpoints: (
-  md: 780px,
-  lg: 1280px,
+        sm: 768px,
+        md: 1200px,
+        lg: 2160px,
 );

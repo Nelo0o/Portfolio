@@ -711,6 +711,7 @@ p {
   line-height: 150%;
   letter-spacing: 0.2px;
   color: hsl(0, 0%, 100%);
+  text-align: center;
 }
 @media screen and (max-width: 768px) {
   .contact-s .container-resume a {
@@ -1111,11 +1112,17 @@ p {
   color: hsl(0, 0%, 100%);
 }
 
+.content .item--code span {
+  text-wrap: none;
+}
 .content .item--code:hover svg {
   animation: code 4s infinite;
 }
 .content .item--code:hover svg path {
   fill: #d4af37;
+}
+.content .item--preview span {
+  text-wrap: none;
 }
 .content .item--preview svg {
   stroke: hsl(0, 0%, 100%);
@@ -1123,6 +1130,11 @@ p {
 .content .item--preview:hover svg {
   animation: preview 1s infinite;
   stroke: #d4af37;
+}
+@media screen and (max-width: 768px) {
+  .content span {
+    scale: 0.9;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

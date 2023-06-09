@@ -293,6 +293,10 @@ $border-right-color_1: transparent;
 
 .content {
   .item--code {
+    span {
+      text-wrap: none;
+    }
+
     &:hover {
       svg {
         animation: code 4s infinite;
@@ -305,6 +309,10 @@ $border-right-color_1: transparent;
   }
 
   .item--preview {
+    span {
+      text-wrap: none;
+    }
+
     svg {
       stroke: $white;
     }
@@ -314,6 +322,12 @@ $border-right-color_1: transparent;
         animation: preview 1s infinite;
         stroke: #d4af37;
       }
+    }
+  }
+
+  @media screen and (max-width: map-get($breakpoints, "md")) {
+    span {
+      scale: 0.9;
     }
   }
 }

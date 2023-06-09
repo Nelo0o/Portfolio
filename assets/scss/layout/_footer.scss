@@ -1,0 +1,49 @@
+.contact-s {
+  background: $primary;
+  padding-top: 120px;
+  padding-bottom: 20px;
+  position: relative;
+
+  h3 {
+    color: $white;
+  }
+
+  .container-resume {
+    grid-column: 1 / span 12;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    p {
+      color: $white;
+    }
+  }
+
+  .container-copyright {
+    grid-column: 1 / span 12;
+    grid-row: 2;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+
+    .copyright {
+      font-weight: map-get($font-weight, "light");
+      font-size: pxToRem(16);
+      line-height: 150%;
+      letter-spacing: 0.2px;
+      color: $white;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: map-get($breakpoints, "md")) {
+    .container-resume {
+      a {
+        align-self: center;
+      }
+    }
+  }
+}

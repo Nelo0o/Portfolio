@@ -1133,7 +1133,7 @@ p {
 }
 @media screen and (max-width: 768px) {
   .content span {
-    scale: 0.9;
+    font-size: 0.875rem;
   }
 }
 

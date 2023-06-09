@@ -327,7 +327,7 @@ $border-right-color_1: transparent;
 
   @media screen and (max-width: map-get($breakpoints, "md")) {
     span {
-      scale: 0.9;
+      font-size: pxToRem(14);
     }
   }
 }

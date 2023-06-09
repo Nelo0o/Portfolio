@@ -25,6 +25,7 @@ addSlideDownListener(".hero__push-link");
 addSlideDownListener(".about");
 addSlideDownListener(".discover");
 addSlideDownListener(".more");
+addSlideDownListener(".contact");
 
 // Rend sticky le header au scroll à partir de la seconde section.
 window.addEventListener("scroll", handleScroll);

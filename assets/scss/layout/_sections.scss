@@ -118,9 +118,73 @@
   padding-top: 120px;
   padding-bottom: 120px;
 
+  .container-projects {
+    grid-column: 1 / span 12;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+  }
+
   @media screen and (max-width: map-get($breakpoints, "md")) {
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    .container-projects {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+  }
+}
+
+.contact-s {
+  background: $primary;
+  padding-top: 120px;
+  padding-bottom: 20px;
+  position: relative;
+
+  h3 {
+    color: $white;
+  }
+
+  .container-resume {
+    grid-column: 1 / span 12;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    p {
+      color: $white;
+    }
+  }
+
+  .container-copyright {
+    grid-column: 1 / span 12;
+    grid-row: 2;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+
+    .copyright {
+      font-weight: map-get($font-weight, "light");
+      font-size: pxToRem(16);
+      line-height: 150%;
+      letter-spacing: 0.2px;
+      color: $white;
+    }
+  }
+
+  @media screen and (max-width: map-get($breakpoints, "md")) {
+    .container-resume {
+      a {
+        align-self: center;
+      }
+    }
   }
 }

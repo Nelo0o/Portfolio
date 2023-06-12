@@ -66,10 +66,12 @@
 
   }
 
-  @media screen and (max-width: map-get($breakpoints, "md")) {
+  @media screen and (max-width: map-get($breakpoints, "lg")) {
     display: flex;
+    justify-content: center;
 
     .about {
+      width: 60vw;
       justify-content: center;
       text-align: center;
       z-index: 50;
@@ -96,6 +98,12 @@
 
     .container-mascotte-md {
       bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: map-get($breakpoints, "sm")) {
+    .about {
+      width: 100%;
     }
   }
 }
@@ -133,7 +141,7 @@
     flex-direction: column;
   }
 
-  @media screen and (max-width: map-get($breakpoints, "sm")) {
+  @media screen and (max-width: map-get($breakpoints, "custom")) {
     .container-projects {
       flex-direction: column;
       align-items: center;

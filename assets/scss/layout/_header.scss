@@ -75,7 +75,7 @@
     }
   }
 
-  @media screen and (max-width: map-get($breakpoints, "md")) {
+  @media screen and (max-width: map-get($breakpoints, "lg")) {
     transition: all 0.2s ease;
 
     .container-logo {

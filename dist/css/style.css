@@ -397,7 +397,7 @@ h3::after {
   margin-top: 5px;
   background-color: hsl(46, 65%, 52%);
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 991px) {
   h3 {
     width: fit-content;
     text-align: center;
@@ -439,7 +439,7 @@ p {
   color: hsl(240, 95%, 8%);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199px) {
   .grid {
     display: grid;
     gap: 20px;
@@ -509,7 +509,7 @@ p {
   padding: 5px;
   background-color: hsl(46, 65%, 52%);
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .header {
     transition: all 0.2s ease;
   }
@@ -609,11 +609,13 @@ p {
   right: 0;
   overflow: hidden;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .hero {
     display: flex;
+    justify-content: center;
   }
   .hero .about {
+    width: 60vw;
     justify-content: center;
     text-align: center;
     z-index: 50;
@@ -637,6 +639,11 @@ p {
     bottom: 0;
   }
 }
+@media screen and (max-width: 767px) {
+  .hero .about {
+    width: 100%;
+  }
+}
 
 .skills {
   background: hsl(0, 0%, 100%);
@@ -644,7 +651,7 @@ p {
   padding-top: 120px;
   height: fit-content;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 991px) {
   .skills {
     display: flex;
     justify-content: center;
@@ -664,14 +671,14 @@ p {
   justify-content: center;
   gap: 40px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 991px) {
   .projects {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1045px) {
   .projects .container-projects {
     flex-direction: column;
     align-items: center;
@@ -715,7 +722,7 @@ p {
   color: hsl(0, 0%, 100%);
   text-align: center;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .contact-s .container-resume a {
     align-self: center;
   }
@@ -746,7 +753,7 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .custom-cursor {
     display: none;
   }
@@ -791,7 +798,7 @@ p {
   transform: rotate(-45deg);
   top: 15%;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .hamburger {
     visibility: visible;
   }
@@ -1138,7 +1145,7 @@ p {
   animation: preview 1s infinite;
   stroke: #d4af37;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .content span {
     font-size: 0.875rem;
   }

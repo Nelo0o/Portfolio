@@ -40,7 +40,7 @@
     }
   }
 
-  @media screen and (max-width: map-get($breakpoints, "md")) {
+  @media screen and (max-width: map-get($breakpoints, "lg")) {
     .container-resume {
       a {
         align-self: center;

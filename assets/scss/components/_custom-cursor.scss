@@ -1,5 +1,4 @@
 .custom-cursor {
-
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -9,7 +8,6 @@
   pointer-events: none;
 
   &::after {
-
     content: "";
     display: block;
     width: 10px;
@@ -24,9 +22,7 @@
 
   }
 
-  @media screen and (max-width: map-get($breakpoints, "md")) {
-
+  @media screen and (max-width: map-get($breakpoints, "lg")) {
     display: none;
-
   }
 }

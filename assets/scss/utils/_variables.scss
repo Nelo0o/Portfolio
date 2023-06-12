@@ -24,7 +24,11 @@ $grid-gap: 20px;
 
 // Breakpoints
 $breakpoints: (
-        sm: 768px,
-        md: 1200px,
-        lg: 2160px,
+        xs: 575px,
+        sm:767px,
+        md: 991px,
+        lg: 1199px,
+        xl: 1439px,
+        xxl: 10000px,
+        custom: 1045px
 );

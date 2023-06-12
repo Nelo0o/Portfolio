@@ -146,6 +146,7 @@ export function createSkills() {
         newContainerInfos.className = "skills-card__infos";
         newImg.src = `${IMAGE_PATH}${element}.svg`;
         newImg.alt = element;
+        newImg.loading = "lazy";
         newH4.innerText = element;
         newSpan.innerText = "1 an";
 
@@ -153,6 +154,7 @@ export function createSkills() {
         newBg.className = "bg-img";
         newBg.src = `${IMAGE_PATH}${BG_SVG[index]}.svg`;
         newBg.alt = BG_SVG[index];
+        newBg.loading = "lazy";
         newCard.append(newBg);
 
         newContainerInfos.append(newImg, newH4, newSpan);

@@ -17,7 +17,7 @@ import {
     setupMascotteContainers, addSlideDownListener, createSkills
 } from "./functions.js";
 
-// Custom cursor
+// Custom cursor.
 window.addEventListener("mousemove", handleCustomCursor);
 
 // Smooth slide sur la section suivante.
@@ -34,7 +34,7 @@ window.addEventListener("scroll", handleScroll);
 const hamburgerMenu = document.querySelector(".header__nav-toggle");
 hamburgerMenu.addEventListener("click", toggleMenu);
 
-// Permet de switch de taille de mascotte pour le responsive
+// Permet de switch de taille de mascotte pour le responsive.
 setupMascotteContainers();
 
 createSkills();

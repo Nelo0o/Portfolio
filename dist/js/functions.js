@@ -145,12 +145,14 @@ export function createSkills() {
         newCard.className = "skills-card";
         newContainerInfos.className = "skills-card__infos";
         newImg.src = `${IMAGE_PATH}${element}.svg`;
+        newImg.alt = element;
         newH4.innerText = element;
         newSpan.innerText = "1 an";
 
         const newBg = document.createElement("img");
         newBg.className = "bg-img";
         newBg.src = `${IMAGE_PATH}${BG_SVG[index]}.svg`;
+        newBg.alt = BG_SVG[index];
         newCard.append(newBg);
 
         newContainerInfos.append(newImg, newH4, newSpan);

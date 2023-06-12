@@ -58,6 +58,7 @@ $border-right-color_1: transparent;
 
 @keyframes fadeIn {
   to {
+    visibility: visible;
     opacity: 1;
   }
 }
@@ -221,6 +222,7 @@ $border-right-color_1: transparent;
 
   > * {
     &:not(.heading) {
+      visibility: hidden;
       opacity: 0;
     }
   }

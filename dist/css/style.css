@@ -367,7 +367,7 @@ h1 .name::after {
   content: "";
   display: block;
   width: 100%;
-  height: 5px;
+  height: 3px;
   margin-top: 5px;
   background-color: hsl(46, 65%, 52%);
 }
@@ -393,7 +393,7 @@ h3::after {
   content: "";
   display: block;
   width: 100%;
-  height: 5px;
+  height: 3px;
   margin-top: 5px;
   background-color: hsl(46, 65%, 52%);
 }
@@ -484,7 +484,7 @@ p {
   display: block;
   margin-top: 6px;
   width: 10px;
-  height: 3px;
+  height: 1px;
   background: hsl(46, 65%, 52%);
   transition: width ease 0.3s;
 }
@@ -695,6 +695,7 @@ p {
   gap: 50px;
 }
 .contact-s .container-resume p {
+  width: 50%;
   color: hsl(0, 0%, 100%);
 }
 .contact-s .container-copyright {
@@ -708,7 +709,7 @@ p {
 }
 .contact-s .container-copyright .copyright {
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 0.8125rem;
   line-height: 150%;
   letter-spacing: 0.2px;
   color: hsl(0, 0%, 100%);
@@ -717,6 +718,9 @@ p {
 @media screen and (max-width: 1200px) {
   .contact-s .container-resume a {
     align-self: center;
+  }
+  .contact-s .container-resume p {
+    width: 100%;
   }
 }
 
@@ -906,6 +910,7 @@ p {
 }
 @keyframes fadeIn {
   to {
+    visibility: visible;
     opacity: 1;
   }
 }
@@ -1053,6 +1058,7 @@ p {
   animation: fadeIn 1s ease 0.5s forwards;
 }
 .card > *:not(.heading) {
+  visibility: hidden;
   opacity: 0;
 }
 .card .heading {

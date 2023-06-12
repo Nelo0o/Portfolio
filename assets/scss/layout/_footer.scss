@@ -16,6 +16,7 @@
     gap: 50px;
 
     p {
+      width: 50%;
       color: $white;
     }
   }
@@ -31,7 +32,7 @@
 
     .copyright {
       font-weight: map-get($font-weight, "light");
-      font-size: pxToRem(16);
+      font-size: pxToRem(13);
       line-height: 150%;
       letter-spacing: 0.2px;
       color: $white;
@@ -43,6 +44,10 @@
     .container-resume {
       a {
         align-self: center;
+      }
+
+      p {
+        width: 100%;
       }
     }
   }

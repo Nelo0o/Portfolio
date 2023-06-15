@@ -6,6 +6,7 @@
   position: fixed;
   z-index: 99999;
   pointer-events: none;
+  display: none;
 
   &::after {
     content: "";
@@ -23,6 +24,6 @@
   }
 
   @media screen and (max-width: map-get($breakpoints, "lg")) {
-    display: none;
+    visibility: hidden;
   }
 }

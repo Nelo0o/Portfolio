@@ -21,7 +21,6 @@ import {
 window.addEventListener("load", () => {
     const customCursor = document.querySelector(".custom-cursor");
     const loading = document.querySelector(".container-loading");
-    const body = document.querySelector("body");
 
     loading.style.display = "none";
     customCursor.style.display = "block";

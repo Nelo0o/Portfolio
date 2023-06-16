@@ -25,7 +25,6 @@ window.addEventListener("load", () => {
 
     loading.style.display = "none";
     customCursor.style.display = "block";
-    body.classList.remove("no-scroll");
 })
 
 // Custom cursor.
